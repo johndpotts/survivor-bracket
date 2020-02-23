@@ -18,22 +18,22 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'tab2',
+        path: 'survivors',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+              import('../survivors/survivors.module').then(m => m.SurvivorsPageModule)
           }
         ]
       },
       {
-        path: 'tab3',
+        path: 'scoring',
         children: [
           {
             path: '',
             loadChildren: () =>
-              import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+              import('../scoring/scoring.module').then(m => m.ScoringPageModule)
           }
         ]
       },

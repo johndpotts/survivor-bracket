@@ -32,6 +32,7 @@ export class LeaderboardPage {
       scores => {
         console.log(scores)
         this.scores = scores;
+        this.players.sort((player1, player2) => this.getPlayerScore(player2.playerId) - this.getPlayerScore(player1.playerId))
       }
     );
   }

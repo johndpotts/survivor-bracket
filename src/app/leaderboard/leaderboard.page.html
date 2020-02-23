@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header >
   <ion-toolbar color="primary">
     <ion-title>
       Leaderboard
@@ -7,11 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Leaderboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
   <ion-img src="assets/Winners_at_War_Logo.png" style="margin: 10px 40px 10px 40px;"></ion-img>
   <ion-card *ngFor="let player of players">
     <img [src]="'assets/players/' + player.imagePath"
@@ -23,7 +18,7 @@
     <ion-card-content>
       <ion-list>
         <ion-item *ngFor="let survivor of getPlayerSurvivors(player.playerId)">
-          <ion-label>{{survivor.firstName}} {{survivor.lastName}} - {{getSurvivorScore(survivor)}} points</ion-label>
+          <ion-label>{{survivor.firstName}} {{survivor.lastName}} | {{getSurvivorScore(survivor)}} points</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>

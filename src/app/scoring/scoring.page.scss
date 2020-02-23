@@ -1,0 +1,12 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+.arrow-down{
+  transform: rotate(0deg);
+  transition: transform .4s linear;
+}
+
+.arrow-down.open{
+  transform: rotate(-180deg);
+  transition: transform .4s linear;
+}

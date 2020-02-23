@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>
+      Survivors
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-list lines="none" *ngFor="let tribe of getTribeNames()">
+    <ion-list-header>
+      {{tribe}}
+    </ion-list-header>
+
+      <ion-item-group   *ngFor="let survivor of getSurvivorsOnTribe(tribe)">
+    <ion-item >
+      <ion-avatar slot="start">
+        <img [src]="'assets/survivors/' + survivor.imagePath">
+      </ion-avatar>
+        <h3>{{survivor.firstName}} {{survivor.lastName}}</h3>
+    </ion-item>
+    <ion-item>
+      <ion-label>Current tribe: </ion-label>
+      <ion-select [value]="survivor.tribe"
+      (ionChange)="changeTribe(survivor, $event.detail.value)">
+        <ion-select-option *ngFor="let tribe of getTribeNames()" [value]='tribe'>{{tribe}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <hr style="background-color:#999; height:1px;"/>
+  </ion-item-group>
+
+
+  </ion-list>
+
+</ion-content>

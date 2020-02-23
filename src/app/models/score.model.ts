@@ -9,4 +9,5 @@ export class Score {
     value: number;
     episode: number;
     type: scoreType;
+    scoreId?: string;
 }

@@ -4,4 +4,6 @@ export class Survivor {
     imagePath: string;
     playerId: number;
     survivorId: number;
+    tribe: string;
+    formerTribes: string[];
 }
